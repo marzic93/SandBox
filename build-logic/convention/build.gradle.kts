@@ -24,7 +24,21 @@ gradlePlugin {
     plugins {
         register("androidLibrary") {
             id = "sandbox.android.library"
-            implementationClass = "AndroidLibraryConventionPlugin"
+            implementationClass = "LibraryConventionPlugin"
+        }
+        register("androidLibraryCompose") {
+            id = "sandbox.android.library.compose"
+            implementationClass = "LibraryComposeConventionPlugin"
+        }
+
+        register("androidApplication") {
+            id = "sandbox.android.application"
+            implementationClass = "ApplicationConventionPlugin"
+        }
+
+        register("androidApplicationCompose") {
+            id = "sandbox.android.application.compose"
+            implementationClass = "ApplicationComposeConventionPlugin"
         }
     }
 }
